@@ -180,3 +180,12 @@ $(function() {
         };
     }
 });
+
+const image = document.getElementById('image');
+fetch('https://dog.ceo/api/breeds/image/random')
+.then(response => {
+    return response.json();
+})
+.then(myJson => {
+    image.src = myJson['message'];
+})
