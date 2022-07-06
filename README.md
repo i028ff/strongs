@@ -1,6 +1,7 @@
 # strongs
 
 git clone //連携取れてなかったとき
+git remote add origin https://github.com/i028ff/strongs.git //これもいるかも
 
 //git init
  
