@@ -13,4 +13,6 @@ git remote add origin https://github.com/i028ff/strongs.git //これもいるか
  4 git push //ローカルからリモートに登録
  
  
- https://qiita.com/wwacky/items/2f110ee76fc1cb681c3b　//これ見たら良いかも
+ https://qiita.com/wwacky/items/2f110ee76fc1cb681c3b　
+ /
+ /これ見たら良いかも
