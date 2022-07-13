@@ -180,12 +180,16 @@ $(function() {
         };
     }
 });
-
-const image = document.getElementById('image');
-fetch('https://dog.ceo/api/breeds/image/random')
-.then(response => {
-    return response.json();
-})
-.then(myJson => {
-    image.src = myJson['message'];
-})
+for(let i=1;i<6;i++){
+    fetch('https://dog.ceo/api/breeds/image/random') // APIのURL
+    .then(response => {
+        return response.json();
+    })
+    .then(myJson => {
+        // imgタグに取得したURL画像を入れる
+        eval("image"+i+".src = myJson['message'];");
+        // 取得したURLをスラッシュ記号で分割し、犬種を表した要素を取得する
+        eval("const breed"+i+"= myJson['message'].split('/')[4];");
+        eval("type"+i+".innerText = breed"+i+";");
+    });
+}
