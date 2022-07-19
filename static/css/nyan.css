@@ -28,15 +28,16 @@ a:hover, a:active {
   padding: 10px;
 }
 .global-header h1 {
-  color: #d43638;
+  color: #920b0b;
   font-family: "Donegal One", serif;
-  font-size: 20px;
-  line-height: 20px;
+  font-size: 50px;
+  line-height: 50px;
   margin: 0;
   text-align: center;
   text-overflow: ellipsis;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
   white-space: nowrap;
+  
 }
 .global-header .masthead {
   float: right;
