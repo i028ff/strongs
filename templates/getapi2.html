@@ -21,16 +21,21 @@
 	</div>
     
 	<div id="container">
-        
-        {% for photo in photos %}
-		<div class="grid">
-				<div class="imgholder">
-					<img class="index_image_index" src="{{photo}}" >
-				</div>
-		</div>
-        {% endfor %} 
-
-    </div>
+		{% for result in results %}{% set A_list_loop = loop %}
+			{% for photo in photos %}
+				{% if loop.index==A_list_loop.index %}
+					<div class="grid">
+						<a href="{{url_for('detail',id=result['place_id'])}}">
+							<div class="imgholder">
+								<img class="index_image_index" src="{{photo}}" >
+							</div>
+						</a>
+						<p>ID:{{result['place_id']}}</p>
+					</div>
+					{% endif %}
+			{% endfor %} 
+		{% endfor %}
+	</div>
 
 <script src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
 <script src="static/js/js.js"></script>
