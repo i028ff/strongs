@@ -15,9 +15,9 @@
 	<header class="global-header">
 		<h1>飯！！！！！！！</h1>
 		<h1>
-			<form action="/search_index" method="POST" enctype="multiport/from-data">
-				<input type="text" name="word">
-				<a href="{{url_for('search_index',word=word)}}">
+			<form action="/search_index" class="word" method="POST">
+				<input type="text" class="word" name="word">
+				<a href="{{url_for('search_index')}}">
 					<button type="submit" value="register">登録</button>
 				</a>
 			</form>
@@ -38,7 +38,6 @@
 								<img class="index_image_index" src="{{photo}}" >
 							</div>
 						</a>
-						<p>ID:{{result['place_id']}}</p>
 					</div>
 					{% endif %}
 			{% endfor %} 
