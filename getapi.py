@@ -10,8 +10,8 @@ app = Flask(__name__)
 def getapi():
     key = 'AIzaSyCqmC20D0M_x4rrJyAMgdvJaY7-4cXYNBM' # 上記で作成したAPIキーを入れる
     client = googlemaps.Client(key) #インスタンス生成
-    loc = {'lat': 35.6288505, 'lng': 139.65863579999996} # 軽度・緯度を取り出す
-    place_results = client.places_nearby(location=loc, radius=1000, keyword='カフェ',language='ja') #半径1000m以内のカフェ情報を取得
+    loc = {'lat': 33.9563797, 'lng': 131.2725447} # 軽度・緯度を取り出す
+    place_results = client.places_nearby(location=loc, radius=1000, keyword='飲食店',language='ja') #半径1000m以内のカフェ情報を取得
     #pprint.pprint(place_results)
     results = []
     photos = []
@@ -33,10 +33,9 @@ def getapi():
             photo = 'https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference={}&key={}'.format(p_value,'AIzaSyCqmC20D0M_x4rrJyAMgdvJaY7-4cXYNBM')
             photos.append(photo)
 
-    #pprint.pprint(photos)
-    print(results)
-    return render_template('getapi.html',result=results,photos=photos)
+    pprint.pprint(photos)
+    #print(results)
+    return render_template('getapi2.html',result=results,photos=photos)
 
 if __name__=='__main__':
     app.run(debug=True)
-

@@ -8,21 +8,21 @@
 </div>
 <p style="color:#45494b; text-align: center;">*駒澤大学から半径1km以内のカフェ情報をGoogle M表示しています</p>
 <div class="index_box">
-    <p>qq</p>
-    {% for result in results %}{% set A_list_loop = loop %}
+    <p>qqqqqqqq</p>
+    {% for results in result %}{% set A_list_loop = loop %}
         {% for photo in photos %}
             {% if loop.index==A_list_loop.index %}
-                <a class='card_title' style="text-decoration: none; color : #000000;" href="{{result['result']['url']}}" target=”_blank”>
+                <a class='card_title' style="text-decoration: none; color : #000000;" href="{{result['url']}}" target=”_blank”>
                 <div class="post_box_index" style="color:#45494b;">
                     <div class="post_top">
-                        <h1　class="index_title"><b>{{result['result']['name']}}</b></h1>
+                        <h1　class="index_title"><b>{{result['name']}}</b></h1>
                     </div>
                     <img class="index_image_index" align='center' src="{{photo}}" alt="">
-                    <p>住所:{{result['result']['vicinity']}}<br>
-                    電話番号:{{result['result']['international_phone_number']}}<br>
-                    評価:{{result['result']['rating']}}</p>
+                    <p>住所:{{result['vicinity']}}<br>
+                    電話番号:{{result['international_phone_number']}}<br>
+                    評価:{{result['rating']}}</p>
                 </a>
-                <p style='font-size:12px;'>WEBサイト<br><a href="{{result['result']['website']}}">{{result['result']['website']}}</a></p>
+                <p style='font-size:12px;'>WEBサイト<br><a href="{{result['website']}}">{{result['website']}}</a></p>
                 </div>
             {% endif %}
         {% endfor %} 
