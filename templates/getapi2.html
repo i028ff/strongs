@@ -14,6 +14,14 @@
 <body>
 	<header class="global-header">
 		<h1>飯！！！！！！！</h1>
+		<h1>
+			<form action="/search_index" method="POST" enctype="multiport/from-data">
+				<input type="text" name="word">
+				<a href="{{url_for('search_index',word=word)}}">
+					<button type="submit" value="register">登録</button>
+				</a>
+			</form>
+		</h1>
 	</header><!-- /header -->
 	<div class="site_box" style="background-image:linear-gradient(-210deg, #BC32A4 0%, #E03768 50%, #F67C33 100%); opacity:0.9;">
 		<h2 class="intro_p" style="color:white;"><b>半径10㎞以内のおすすめ！</b>
