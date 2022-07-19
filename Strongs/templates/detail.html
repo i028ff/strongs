@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>詳細画面テスト</title>
+        <meta name="description" content="詳細画面のテストです。">
+        <link rel="stylesheet" href="../static/css/detail.css">
+        <script src="../static/js/details.js"></script>
+    </head>
+
+    <body>
+        <header class="global-header">
+            <a action="/" title="ホームへ戻る" class="btn-pill">&laquo;</a>
+            <h1>{{detail['name']}}</h1>
+        </header>
+
+
+        <div class="imgholder">
+        </div>
+
+        <div id="map"></div>
+
+        <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_j3p1GZ9FWKt5Do_yRBdi_FvIFgNgqyQ&libraries=places&v=weekly"
+        defer
+        ></script>
+
+        <p>
+            店名
+        </p>
+        <p>
+            {{detail.text}}
+        </p>
+    </body>
+</html>
