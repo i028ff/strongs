@@ -18,8 +18,8 @@ def search_index():
             word = request.form["word"]
             key = 'AIzaSyCqmC20D0M_x4rrJyAMgdvJaY7-4cXYNBM' #APIキー
             print(word)
-            geo_request_ur1 = 'https://get.geojs.io/v1/ip/geo.json'
-            data = requests.get(geo_request_ur1).json()
+            #eo_request_ur1 = 'https://get.geojs.io/v1/ip/geo.json'
+            #data = requests.get(geo_request_ur1).json()
             client = googlemaps.Client(key) #インスタンス生成
             loc = {'lat': 33.9564096, 'lng': 131.2706817} # 軽度・緯度を取り出す
             place_results = client.places_nearby(location=loc, radius=10000, keyword={word} ,language='ja') #半径1000m以内のカフェ情報を取得
