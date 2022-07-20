@@ -176,12 +176,13 @@ $(function() {
 });
 
 $(function(){
-    var list = ['ラーメン？',
-                'カレー？',
-                'オムライス？',
-                '中華？',
-                '居酒屋？',
-                '定食？'],
+    var list = ['ラーメンたべたべ？',
+                'カレーたべたべ？',
+                'オムライスたべたべ？',
+                '中華たべたべ？',
+                '居酒屋たべたべ？',
+                '定食たべたべ？',
+                '牛丼たべたべ？'],
         r = Math.floor(Math.random() * list.length);
     $('#placeholder').prop('placeholder',list[r]);
 });
