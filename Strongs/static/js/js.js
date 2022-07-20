@@ -56,12 +56,6 @@ $(function() {
         colWidth = $('.grid').outerWidth() + offsetX * 2;
         numOfCol = Math.floor((winObject.width() - offsetX * 2) / colWidth);
     }
-    var gridArray = [], // ※補足2
-        colWidth,
-        offsetX = 5,
-        offsetY = 5,
-        numOfCol = 5;
- 
     // gridArrayに新しいgridを追加
     function pushGridArray(x, y, size, height) {
         for (var i=0; i<size; i++) {
@@ -158,7 +152,7 @@ $(function() {
         // gridArrayを新しいgridで更新
         removeGridArray(pos.x, grid.data('size'));
         pushGridArray(pos.x, pos.y, grid.data('size'), grid.outerHeight());
-    }
+    };
  
     //IE用にArray.indexOfメソッドを追加  // ※補足4
     if (!Array.prototype.indexOf) {
@@ -180,16 +174,14 @@ $(function() {
         };
     }
 });
-for(let i=1;i<6;i++){
-    fetch('https://dog.ceo/api/breeds/image/random') // APIのURL
-    .then(response => {
-        return response.json();
-    })
-    .then(myJson => {
-        // imgタグに取得したURL画像を入れる
-        eval("image"+i+".src = myJson['message'];");
-        // 取得したURLをスラッシュ記号で分割し、犬種を表した要素を取得する
-        eval("const breed"+i+"= myJson['message'].split('/')[4];");
-        eval("type"+i+".innerText = breed"+i+";");
-    });
-}
+
+$(function(){
+    var list = ['ラーメン？',
+                'カレー？',
+                'オムライス？',
+                '中華？',
+                '居酒屋？',
+                '定食？'],
+        r = Math.floor(Math.random() * list.length);
+    $('#placeholder').prop('placeholder',list[r]);
+});
