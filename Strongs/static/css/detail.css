@@ -4,10 +4,12 @@
 body {
   background-color: #faf7f7;
   color: #333;
-  font-size: 15px;
+  font-family: "ヒラギノ角ゴ ProN", sans serif;
+  font-size: 16px;
   margin: 0;
   overflow-x: hidden;
   padding: 0;
+  line-height: 16px;
 }
 
 a {
@@ -29,14 +31,14 @@ a:hover, a:active {
   }
 .global-header h1 {
   color: #d43638;
-  font-family: "Donegal One", serif;
+  font-family: "ヒラギノ角ゴ ProN", sans serif;
   font-size: 20px;
   line-height: 20px;
   margin: 0;
   text-align: center;
   text-overflow: ellipsis;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
-  white-space: nowrap;
+
 }
 .global-header .masthead {
   float: right;

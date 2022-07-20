@@ -2,11 +2,11 @@
 /* Reset
 ----------------------------------------*/
 body {
-  background-image: url(../img/bg-gray.png);
   color: #333;
-  font-family: Chivo, Helvetica, serif;
+  font-family: "游ゴシック", sans serif;
   font-size: 15px;
   margin: 0;
+  text-align: center;
   overflow-x: hidden;
   padding: 0;
 }
@@ -29,8 +29,8 @@ a:hover, a:active {
 }
 .global-header h1 {
   color: #d43638;
-  font-family: "Donegal One", serif;
-  font-size: 20px;
+  font-family: "ヒラギノ角ゴ ProN", sans serif;
+  font-size: 30px;
   line-height: 20px;
   margin: 0;
   text-align: center;
@@ -66,12 +66,12 @@ a:hover, a:active {
 .grid {
   background: #fff;
   box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
-  float: left;
+  float: right;
   font-size: 12px;
-  margin: 8px;
+  margin: 6px;
   min-height: 100px;
-  padding: 15px;
-  width: 188px;
+  padding: 6px;
+  width: 160px;
   -webkit-transition: top 1s ease, left 1s ease;
   -moz-transition: top 1s ease, left 1s ease;
   -o-transition: top 1s ease, left 1s ease;

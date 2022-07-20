@@ -6,19 +6,22 @@
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<meta name="format-detection" content="telephone=no">
-		<meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1,user-scalable=no,initial-scale=1.0">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<link href="http://fonts.googleapis.com/css?family=Chivo" rel="stylesheet" type="static/css/nyan.css">
 		<link href="http://fonts.googleapis.com/css?family=Donegal+One" rel="stylesheet" type="static/css/nyan.css">
-		<link rel="stylesheet" href="static/css/nyan.css">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/nyan.css') }}">
 	</head>
 	<body>
 		<header class="global-header">
-			<h1>飯！！！！！！！</h1>
+			<h1>ごはんたべたべあぷり</h1>
+		
 			<h1>
+				<!-- <form action="/search_index" class="word" method="POST">
+					<input type="text" class="word" name="word" placeholder="ラーメン？"> -->
 				<form action="/search_index" class="word" method="POST">
-					<input type="text" class="word" name="word">
+						<input type="text" class="word" name="word" placeholder="ラーメン？" id ="placeholder">
 					<a href="{{url_for('search_index')}}">
-						<button type="submit" value="register">登録</button>
+						<button type="submit" value="register">検索</button>
 					</a>
 				</form>
 			</h1>
@@ -45,7 +48,7 @@
 		</div>
 
 		<script src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
-		<script src="static/js/js.js"></script>
+		<script src="{{url_for('static', filename='js/js.js')}}"></script>
 
 	</body>
 </html>
